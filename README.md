@@ -37,9 +37,9 @@ chmod +x pio_04rpi.sh
 ```
 nano /home/pi/hi/platformio.ini
 ```
-* Comment the following line like this
+** Comment the following line like this **
 * ;platform_packages = toolchain-xtensa32@https://github.com/esphome/esphome-docker-base/releases/download/v1.4.0/toolchain-xtensa32.tar.gz
-* After Edit The Config File Just Save And Exit
+** After Edit The Config File Just Save And Exit **
 ```
 Ctrl+x
 Y 
