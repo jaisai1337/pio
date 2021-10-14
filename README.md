@@ -26,7 +26,8 @@ chmod +x pio_03.sh
 cd hi
 pio run
 ```
-### Installing PlatfromIO & 
+#On Your RaspberryPi
+### Installing PlatfromIO, Making Directory To Store firmware.bin & Download PlatformIO Config File 
 ```
 wget https://raw.githubusercontent.com/jaisai1337/pio/main/pio_04rpi.sh
 chmod +x pio_04.sh
