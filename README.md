@@ -26,7 +26,7 @@ chmod +x pio_03.sh
 cd hi
 pio run
 ```
-#On Your RaspberryPi
+# On Your RaspberryPi
 ### Installing PlatfromIO, Making Directory To Store firmware.bin & Download PlatformIO Config File 
 ```
 wget https://raw.githubusercontent.com/jaisai1337/pio/main/pio_04rpi.sh
@@ -43,4 +43,16 @@ nano platformio.ini
 ```
 Ctrl+x
 Y 
+```
+# On Your Phone Termux
+### Copy firmware.bin to RaspberryPi (Change the IPAddress in Command)
+```
+scp .pio/build/esp32doit-devkit-v1/firmware.bin pi@192.168.1.6:/home/pi/hi/.pio/build/esp32doit-devkit-v1/
+```
+
+# On Your RaspberryPi
+### Installing into ESP32
+```
+cd /home/pi/hi/
+pio run -t nobuild -t upload
 ```
