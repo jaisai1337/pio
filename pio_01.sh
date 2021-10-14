@@ -1,4 +1,4 @@
-apt update && apt upgrade
+apt update && apt upgrade -y
 apt install build-essential
 apt install git silversearcher-ag wget openssh subversion imagemagick proot nano python  bsdtar mutt nmap proot-distro -y
 apt update
