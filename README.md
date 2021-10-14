@@ -15,7 +15,7 @@ wget https://raw.githubusercontent.com/jaisai1337/pio/main/pio_02.sh
 chmod +x pio_02.sh
 ./pio_02.sh
 ```
-## Installing PlatfromIO & Downloading Blinking Light Project on ESP32
+## Installing PlatfromIO & Downloading Blinking Light Project For ESP32
 ```
 wget https://raw.githubusercontent.com/jaisai1337/pio/main/pio_03.sh
 chmod +x pio_03.sh
@@ -23,19 +23,19 @@ chmod +x pio_03.sh
 ```
 ## Compling the Project 
 ```
-cd hi
+cd /root/hi/
 pio run
 ```
 # On Your RaspberryPi
 ### Installing PlatfromIO, Making Directory To Store firmware.bin & Download PlatformIO Config File 
 ```
 wget https://raw.githubusercontent.com/jaisai1337/pio/main/pio_04rpi.sh
-chmod +x pio_04.sh
-./pio_04.sh
+chmod +x pio_04rpi.sh
+./pio_04rpi.sh
 ```
 ### Edit The Config File
 ```
-nano platformio.ini
+nano /home/pi/hi/platformio.ini
 ```
 * Comment the following line like this
 * ;platform_packages = toolchain-xtensa32@https://github.com/esphome/esphome-docker-base/releases/download/v1.4.0/toolchain-xtensa32.tar.gz
@@ -52,6 +52,33 @@ scp .pio/build/esp32doit-devkit-v1/firmware.bin pi@192.168.1.6:/home/pi/hi/.pio/
 
 # On Your RaspberryPi
 ### Installing into ESP32
+```
+cd /home/pi/hi/
+pio run -t nobuild -t upload
+```
+## Downloading Blinking Light Project For Arduino
+```
+svn co https://github.com/gadepall/termux/trunk/pio/Projects/hello
+```
+## Compling the Project 
+```
+cd /root/hello/
+pio run
+```
+# On Your RaspberryPi
+### Making Directory To Store firmware.hex & Download PlatformIO Config File
+```
+wget https://raw.githubusercontent.com/jaisai1337/pio/main/pio_08rpi.sh
+chmod +x pio_08rpi.sh
+./pio_08rpi.sh
+```
+# On Your Phone Termux
+### Copy firmware.bin to RaspberryPi (Change the IPAddress in Command)
+```
+scp .pio/build/uno/firmware.hex pi@192.168.1.6:/home/pi/Projects/hello/.pio/build/uno/
+```
+# On Your RaspberryPi
+### Installing into Arduino
 ```
 cd /home/pi/hi/
 pio run -t nobuild -t upload
