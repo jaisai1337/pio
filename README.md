@@ -33,3 +33,14 @@ wget https://raw.githubusercontent.com/jaisai1337/pio/main/pio_04rpi.sh
 chmod +x pio_04.sh
 ./pio_04.sh
 ```
+### Edit The Config File
+```
+nano platformio.ini
+```
+Comment the following line like this
+;platform_packages = toolchain-xtensa32@https://github.com/esphome/esphome-docker-base/releases/download/v1.4.0/toolchain-xtensa32.tar.gz
+#### After Edit The Config File Just Save And Exit
+```
+Ctrl+x
+Y 
+```
