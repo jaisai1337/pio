@@ -2,7 +2,6 @@ pip3 install platformio
 mkdir -p ~/hello/.pio/build/uno/
 cd hi
 wget https://raw.githubusercontent.com/gadepall/termux/main/pio/Projects/hi/platformio.ini
-nano platformio.ini 
 
 #CHANGE ALL THIS
 
