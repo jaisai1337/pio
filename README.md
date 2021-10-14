@@ -47,7 +47,7 @@ Y
 # On Your Phone Termux
 ### Copy firmware.bin to RaspberryPi (Change the IPAddress in Command)
 ```
-scp .pio/build/esp32doit-devkit-v1/firmware.bin pi@192.168.1.6:/home/pi/hi/.pio/build/esp32doit-devkit-v1/
+scp /root/hi/.pio/build/esp32doit-devkit-v1/firmware.bin pi@192.168.1.6:/home/pi/hi/.pio/build/esp32doit-devkit-v1/
 ```
 
 # On Your RaspberryPi
@@ -75,11 +75,11 @@ chmod +x pio_08rpi.sh
 # On Your Phone Termux
 ### Copy firmware.bin to RaspberryPi (Change the IPAddress in Command)
 ```
-scp .pio/build/uno/firmware.hex pi@192.168.1.6:/home/pi/Projects/hello/.pio/build/uno/
+scp /root/hello/.pio/build/uno/firmware.hex pi@192.168.1.6:/home/pi/Projects/hello/.pio/build/uno/
 ```
 # On Your RaspberryPi
 ### Installing into Arduino
 ```
-cd /home/pi/hi/
+cd /home/pi/hello/
 pio run -t nobuild -t upload
 ```
