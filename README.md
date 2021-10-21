@@ -74,7 +74,7 @@ chmod +x pio_08rpi.sh
 ./pio_08rpi.sh
 ```
 # On Your Phone Termux
-### Copy firmware.bin to RaspberryPi (Change the IPAddress in Command)
+### Copy firmware.hex to RaspberryPi (Change the IPAddress in Command)
 ```
 scp /root/hello/.pio/build/uno/firmware.hex pi@192.168.1.6:/home/pi/Projects/hello/.pio/build/uno/
 ```
