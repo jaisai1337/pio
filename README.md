@@ -58,6 +58,7 @@ pio run -t nobuild -t upload
 ```
 ## Downloading Blinking Light Project For Arduino
 ```
+cd /root/
 svn co https://github.com/gadepall/termux/trunk/pio/Projects/hello
 ```
 ## Compling the Project 
